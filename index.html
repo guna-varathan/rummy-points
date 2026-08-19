@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rummy Points</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <h1 id="page-title">Welcome to Rummy Points</h1>
+    </header>
+
+    <main class="app" aria-labelledby="page-title">
+
+        <!-- Winner -->
+        <section
+            id="winner-section"
+            aria-labelledby="winner-heading"
+            hidden
+        >
+            <h2 id="winner-heading">
+                🏆 Winner
+            </h2>
+
+            <div id="winner-container">
+
+                <img
+                    id="winner-trophy"
+                    src="trophy.gif"
+                    alt="Trophy"
+                >
+
+                <h3 id="winner-name"></h3>
+
+                <p id="winner-message">
+                    Won the Game
+                </p>
+
+                <p id="winner-rounds"></p>
+
+            </div>
+        </section>
+
+        
+
+        <!-- Step 1: Player Name Collection -->
+        <section
+            id="player-setup"
+            aria-labelledby="player-setup-heading"
+        >
+
+            <h2 id="player-setup-heading">Player Setup</h2>
+
+            <div class="form-group">
+
+                <label for="player-names">
+                    Player Names
+                </label>
+
+                <p id="player-names-help">
+                    Enter player names separated by spaces.
+                </p>
+
+                <input
+                    type="text"
+                    id="player-names"
+                    name="player-names"
+                    aria-describedby="player-names-help"
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <button
+                type="button"
+                id="create-players"
+            >
+                Create Players
+            </button>
+
+        </section>
+
+
+        <!-- Step 2: Players -->
+        <section
+            id="players-section"
+            aria-labelledby="players-heading"
+            hidden
+        >
+
+            <h2 id="players-heading">Players</h2>
+
+            <div
+                id="players-container"
+                aria-live="polite"
+            >
+            </div>
+
+            <button
+                type="button"
+                id="reduce-points"
+            >
+                Reduce Points
+            </button>
+
+        </section>
+
+
+        <!-- Eliminated Players -->
+        <section
+            id="eliminated-section"
+            aria-labelledby="eliminated-heading"
+            hidden
+        >
+
+            <h2 id="eliminated-heading">
+                Eliminated Players
+            </h2>
+
+            <div id="eliminated-container">
+                <p>No players eliminated yet.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ROUND HISTORY -->
+        <section
+            id="history-section"
+            aria-labelledby="history-heading"
+            hidden
+        >
+
+            <button
+                type="button"
+                id="history-button"
+                aria-expanded="false"
+                aria-controls="history-container"
+            >
+                📜 Round History
+            </button>
+
+
+            <div
+                id="history-container"
+                hidden
+            >
+
+                <h2 id="history-heading">
+                    Round History
+                </h2>
+
+                <div
+                    id="history-table-wrapper"
+                    tabindex="0"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="reset-section"
+            aria-labelledby="reset-heading"
+            hidden
+        >
+
+            <h2 id="reset-heading">Game Controls</h2>
+
+            <button
+                type="button"
+                id="reset-game"
+            >
+                Reset Game
+            </button>
+
+        </section>
+
+
+        <!-- Screen reader status -->
+        <div
+            id="status-message"
+            class="status"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
