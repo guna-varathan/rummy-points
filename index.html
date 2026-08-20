@@ -94,6 +94,8 @@
 
             <h2 id="players-heading">Players</h2>
 
+            <p id="round-counter"></p>
+
             <div
                 id="players-container"
                 aria-live="polite"
@@ -135,23 +137,10 @@
             hidden
         >
 
-            <button
-                type="button"
-                id="history-button"
-                aria-expanded="false"
-                aria-controls="history-container"
-            >
-                📜 Round History
-            </button>
-
-
-            <div
-                id="history-container"
-                hidden
-            >
+            <div id="history-container">
 
                 <h2 id="history-heading">
-                    Round History
+                    📜 Round History
                 </h2>
 
                 <div
@@ -172,6 +161,14 @@
         >
 
             <h2 id="reset-heading">Game Controls</h2>
+
+            <button
+                type="button"
+                id="undo-round"
+                disabled
+            >
+                ↩️ Undo Last Round
+            </button>
 
             <button
                 type="button"
